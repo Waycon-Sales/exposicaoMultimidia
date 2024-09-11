@@ -1,0 +1,22 @@
+{
+  "name": "instalacoes",
+  "version": "1.0.0",
+  "description": "Projeto de instalações multimidia",
+  "main": "./src/App.js",
+  "scripts": {
+    "start": "nodemon ./app/App.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --inspect ./src/App.js"
+  },
+  "author": "AntonioWaycon-ThiagoFelipe-ManoelSobrinho",
+  "license": "ISC",
+  "dependencies": {
+    "@serialport/parser-readline": "^12.0.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4",
+    "serialport": "^12.0.0",
+    "socket.io": "^4.7.5"
+  }
+}
