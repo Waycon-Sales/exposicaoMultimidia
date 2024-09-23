@@ -1,0 +1,288 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('fontes/Nunito-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Importando a fonte Nunito Regular */
+@font-face {
+    font-family: 'Nunito';
+    src: url('fontes/Nunito-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Importando a fonte Outfit Bold */
+@font-face {
+    font-family: 'Outfit';
+    src: url('fontes/Outfit-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Importando a fonte Outfit Regular */
+@font-face {
+    font-family: 'Outfit';
+    src: url('fontes/Outfit-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.titleNunito {
+    font-family: 'Nunito', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFF;
+    margin-bottom: 20px;
+}
+
+
+.titleOutfit {
+        font-family: 'Outfit', sans-serif;
+        font-size: 32px;
+        font-weight: bold;
+        color: #FFF;
+        margin-bottom: 20px;
+        position: relative;
+        text-shadow: 
+            2px 2px 5px rgba(0, 0, 0, 0.5),   
+            -2px -2px 5px rgba(255, 255, 255, 0.5); 
+}
+
+.titleOutfitLine {
+    font-family: 'Outfit', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #FFF;
+    position: relative;
+    text-align: center;
+    opacity: 1;
+    text-shadow: 
+            2px 2px 5px rgba(0, 0, 0, 0.5),   
+            -2px -2px 5px rgba(255, 255, 255, 0.5); 
+}
+
+
+.textNunito {
+    font-family: 'Nunito', sans-serif;
+    font-size: 23px;
+    font-weight: normal;
+    line-height: 1.6;
+    color: #FFF;
+    margin-bottom: 15px;
+
+}
+
+
+.textOutfit {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 
+    2px 2px 5px rgba(0, 0, 0, 0.5),   
+    -2px -2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.ml-40{
+    margin-left:65px;
+}
+
+
+#app {
+    position: relative;
+    width: 1200px;
+    height: 600px;
+    background-color: #ff6f00;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: background-color 1s ease;
+}
+
+.bgImage{
+    background-image: url(./images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgImage02{
+    background-image: url(./images/bg02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgImage03{
+    background-image: url(./images/bg3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#character {
+    position: absolute;
+    bottom:-100px;
+    transform: translateX(140%);
+    width: 500px; /* Altere para o tamanho desejado */
+    height: 500px;
+}
+
+#character-image{
+    width: 100%;
+    height: 80%;
+    object-fit: cover; /* Preenche o container da imagem */
+}
+
+
+#dialog-box {
+    position: absolute;
+    bottom: 30px;
+    left: 35%;
+    transform: translateX(-56%);
+    background-color: rgba(0,144,255,0.9);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#dialog-text {
+    margin: 0;
+}
+
+#video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 2s ease;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 10px;
+    background-color: #ff6f00;
+    animation: drawLine 9s ease forwards;
+}
+
+.moving-image {
+    position: absolute;
+    top: calc(50% - 100px); /* Centraliza a imagem acima da linha (ajuste 30px conforme o tamanho da imagem) */
+    left: -100px;
+    width: 100px; /* Defina o tamanho da imagem conforme necessário */
+    height: auto;
+    animation: moveImage 11s ease forwards;
+}
+
+
+
+.text {
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    opacity: 1;
+    
+}
+
+@keyframes drawLine {
+    to {
+        width: 60%;
+    }
+}
+
+@keyframes drawLineFinal {
+    to {
+        width: 90%;
+    }
+}
+
+
+
+@keyframes moveImage {
+    0% {
+        left: -170px;
+    }
+    100% {
+        left: 60%; /* A imagem se move junto com a linha */
+    }
+}
+
+@keyframes moveImageFinal {
+    0% {
+        left: -170px;
+    }
+    100% {
+        left: 85%; /* A imagem se move junto com a linha */
+    }
+}
+
+
+
+.circle {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: #ff6f00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    right: -60px; /* Começa fora da tela à direita */
+    top: 50%;
+    transform: translateY(-50%);
+    animation: moveCircle 5s ease forwards;
+    cursor: pointer;
+}
+
+.circle span {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+@keyframes moveCircle {
+    0% {
+        right: -60px;
+    }
+    100% {
+        right: 38%;
+    }
+}
+
+@keyframes expandCircle {
+    0% {
+        right: 40%;
+    }
+    100% {
+        right: 0;
+        border-radius: 35%;
+        width: 100%;
+        height: 2000px;
+    }
+}

@@ -4,14 +4,33 @@
         <meta charset="utf-8">
         <title>Instalações Multimídia</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+        <link rel="stylesheet" href="/styles.css">
+        
     </head>
     <body>
-        <h1>Prototipando...</h1>
+        <div id="app">
+
+            <h1 class="titleOutfit ml-40">Linha do tempo</h1>
+            <h3 class="textOutfit ml-40">Guerras mundiais e Guerra Fria</h3>
+            <div id="character">
+                <img src="/images/personagem.png" width="450px" height="450px" alt="Personagem" id="character-image">
+            </div>
+            <div id="dialog-box" class="hidden">
+                <p id="dialog-text"></p>
+            </div>
+
+            <div class="hidden" id="line"></div>
+            <img src="/images/walking.gif" id="gifPerson" alt="Imagem" class="hidden">
+            <div class="hidden" id="circle">
+                <span class="titleOutfitLine ">1914 - Primeira Guerra Mundial</span>
+            </div>
+
+            <video id="video-player" width="600" controls class="hidden">
+                <source src="/video/video.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <audio id="audio-player" class="hidden"></audio>
+        </div>
+        <script src="/main.js"></script>
     </body>
-    <script>
-        const socket = io();
-        socket.on('serial:data', (dataSerial) => {
-            console.log(dataSerial.value);
-        });
-    </script>
 </html>
