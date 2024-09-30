@@ -115,7 +115,7 @@ body, html {
 }
 
 .bgImage{
-    background-image: url(./images/bg.jpg);
+    background-image: url(./images/bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -193,7 +193,7 @@ body, html {
 
 .moving-image {
     position: absolute;
-    top: calc(50% - 100px); /* Centraliza a imagem acima da linha (ajuste 30px conforme o tamanho da imagem) */
+    top: calc(50% - 132px); /* Centraliza a imagem acima da linha (ajuste 30px conforme o tamanho da imagem) */
     left: -100px;
     width: 100px; /* Defina o tamanho da imagem conforme necessário */
     height: auto;

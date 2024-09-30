@@ -20,9 +20,14 @@ app.get('/fluxo03', (req,res) => {
     res.sendFile(path.join(__dirname, 'public', 'fluxo03.html'));
 })
 
+app.get('/creditos', (req,res) => {
+    res.sendFile(path.join(__dirname, 'public', 'creditos.html'));
+})
+
 server.listen(3001, () => {
     console.log("Servidor rodando na porta", server.address().port);
 });
+
 
 const io = require('socket.io')(server);
 
@@ -53,5 +58,3 @@ port.on('open', () => {
         
     });
 });
-
-
